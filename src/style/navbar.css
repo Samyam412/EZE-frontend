@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.navbar_logo {
+  width: 100%;
+  max-height: 5rem;
+  padding-top: 1rem;
+}
+
+.navbar_icons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 2rem;
+  gap: 1rem;
+  width: 15rem;
+}
+
+.navbar_icons button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.25rem;
+}
+
+.navbar_search {
+    color: #000;
+    background-color: transparent;
+    border: none;
+
+}
+.navbar_hr{
+    color: #909090;
+    max-width: 90%;
+}
+
+.navbar_profile{
+    color: #000;
+}
+
+@media screen and (max-width: 426px) {
+  .navbar {
+    padding: 0 1rem;
+
+  }
+}

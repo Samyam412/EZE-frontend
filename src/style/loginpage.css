@@ -1,0 +1,113 @@
+.login-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+  height: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 80px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background-image: url(https://images.unsplash.com/photo-1635776062360-af423602aff3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mb-3{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.login-form h1{
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 2rem;
+}
+
+.login-form input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid #888888;
+  padding: 0 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.toggle-form-btn {
+  width: 3rem;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.error{
+  color: red;
+  font-size: 1rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.toggle-form-btn button {
+  font-size: 14px;
+
+  color: #333333;
+}
+
+.form_change{
+  display: block;
+  position: relative;
+  top: 10%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.login-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form_btn{
+  white-space: pre-line;
+  font-size: medium;
+  background-color: white;
+  color: #000;
+  margin-top: 0.24rem;
+}
+.error_text{
+  color: red;
+  font-size: 1rem;
+  margin-top:2rem;
+}
+
+.register_btn{
+  border-radius: 25px;
+background: #37D759;
+  align-self: center;
+  margin-top: 10px;
+  width: 12rem;
+}
+
+.register_btn:hover{
+  background: #186728;
+  transition: ease-in-out 0.3s;
+}
+@media (max-width: 576px) {
+  .login-form {
+    padding: 20px;
+    width: 250px;
+  }
+  .login-container {
+    height: auto;
+    padding: 20px;
+  }
+}

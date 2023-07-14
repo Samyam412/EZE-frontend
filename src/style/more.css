@@ -1,0 +1,64 @@
+.more-nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 3rem auto;
+    min-width: 80%;
+    padding: 0;
+  }
+  
+  .more-link {
+    margin: 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #414040;
+    text-decoration: none;
+    padding: 0 2rem;
+  }
+  
+  .more-nav button{
+    background-color: white;
+  }
+  .more-link:hover {
+    color: #48bb78;
+  }
+  
+  .active {
+    text-decoration: none;
+    text-decoration-color: #48bb78;
+    color: #48bb78;
+  }
+
+  .more-link .active{
+    text-decoration: none;
+    text-decoration-color: #48bb78;
+    color: #48bb78;
+  }
+
+.seminav_hr{
+  color: #c0bcbc;
+  max-width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+ .nav-link{
+    font-size: 1rem;
+   padding: 0;
+ }
+  
+}
+  
+  @media screen and (max-width: 426px) {
+    .nav {
+      width: 100%;
+    }
+    .nav-link{
+      font-size: 0.75rem;
+      
+     
+    }
+  
+   
+    
+  }
