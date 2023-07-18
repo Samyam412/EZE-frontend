@@ -1,9 +1,14 @@
 .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
   }
   
   .profile-title {
-    font-size: 24px;
+    font-size: 3.5rem;
     margin-bottom: 10px;
   }
   
@@ -27,13 +32,6 @@
   .cart-title {
     font-size: 20px;
     margin-bottom: 10px;
-  }
-  
-  .cart-item {
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f8f8f8;
   }
   
   .product-details {
@@ -76,9 +74,79 @@
     width: 100px;
     height: 100px;
   }
+
+
   
   .product-image {
-    width: 100px;
-    height: 100px;
+    max-width: 40%;
+    max-height: 250px;
     margin-right: 10px;
   }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    border: grey solid 1px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .cart-item img{
+    max-width: 30%;
+    max-height: 50%;
+    margin: 3%;
+    aspect-ratio: auto 4/3;
+    
+  }
+  
+  .product-display-button{
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    height: 50%;
+    cursor: pointer;
+  }
+  
+  .delete-item-btn{
+    background-color: #f44336;
+    color: #ffffff;
+    border: none;
+    font-size: small;
+    
+
+    cursor: pointer;
+  }
+
+@media screen and (max-width:426px) {
+
+    .product-name{
+        font-size: 1rem;
+    }
+    
+    .product-quantity{
+        font-size: 0.65rem;
+    }
+
+    .product-created{
+        font-size: 0.65rem;
+    }
+
+    .delete-item-btn{
+        font-size: 0.65rem;
+        padding: 0.5rem;
+    }
+    
+}

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Navigate } from "react-router-dom";
 import SemiNav from "../components/seminav";
 import hero from "../static/hero.png";
 import kitchen from "../static/kitchen.png";
@@ -9,8 +10,21 @@ import heor2 from "../static/hero2.png";
 import Card from "../components/card";
 import "../style/homepage.css";
 
+const Homepage = () => {
+  const exploreSectionRef = useRef(null);
 
-const homepage = () => {
+  const heroNavigation = () => {
+    exploreSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const navigateToEnquiry = () => {
+    return <Navigate to="/contact" />;
+  };
+
+  const navigateToProduct = () => {
+    return <Navigate to={`/product`} />;
+  };
+
   return (
     <>
       <SemiNav />
@@ -19,36 +33,50 @@ const homepage = () => {
           <img src={hero} alt="" className="image_fit" />
         </div>
         <div className="hero_button">
-          <button className="hero_button1">Explore</button>
-          <button className="hero_button2">Enquire</button>
+          <button className="hero_button1" onClick={heroNavigation}>
+            Explore
+          </button>
+          <button className="hero_button2" onClick={navigateToEnquiry}>
+            Enquire
+          </button>
         </div>
       </div>
 
-      <div className="card_container">
-        <Card img={kitchen}
-          title='Kitchen'
-          desc = 'Browse our kitchen appliances form mixer grinders to stoves' />
-        <Card img={appliance}
-          title='Aplliances'
-          desc = 'Rediscover our home appliances with innovative products ' />
-        <Card img={general}
-          title='General'
-          desc = 'make your day to day activities easier' />
-      </div> 
+      <div ref={exploreSectionRef} className="card_container">
+        <Card
+          img={kitchen}
+          title="Kitchen"
+          desc="Browse our kitchen appliances from mixer grinders to stoves"
+          onClick={() => navigateToProduct()}
+        />
+        <Card
+          img={appliance}
+          title="Appliances"
+          desc="Rediscover our home appliances with innovative products"
+          onClick={() => navigateToProduct()}
+        />
+        <Card
+          img={general}
+          title="General"
+          desc="Make your day-to-day activities easier"
+          onClick={() => navigateToProduct()}
+        />
+      </div>
 
       <div className="hero2">
         <div className="hero_img">
           <img src={heor2} alt="" className="image_fit" />
         </div>
         <div className="hero_button_f">
-          <button className="hero_button3">Find out more</button>
+          <button onClick={heroNavigation} className="hero_button3">
+            Find out more
+          </button>
         </div>
       </div>
-      
-      <More/>
-      
+
+      <More />
     </>
   );
 };
 
-export default homepage;
+export default Homepage;

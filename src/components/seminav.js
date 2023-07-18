@@ -16,7 +16,7 @@ const SemiNav = () => {
           Home
         </Link>
         <Link to="/product" className={`nav-link ${isActive("/product") ? "active" : ""}`}>
-          Product
+          Products
         </Link>
         <Link to="/support" className={`nav-link ${isActive("/support") ? "active" : ""}`}>
           Support

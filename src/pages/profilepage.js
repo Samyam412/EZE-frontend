@@ -173,9 +173,6 @@ const ProfilePage = () => {
               {item.product && (
                 <p className="product-name">{item.product.name}</p>
               )}
-              {item.product && (
-                <p className="product-description">{item.product.content}</p>
-              )}
               <p className="product-quantity">
                 <span className="quantity-label">Quantity:</span>{" "}
                 {item.quantity}

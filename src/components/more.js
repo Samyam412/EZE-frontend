@@ -8,7 +8,7 @@ const More = () => {
   const [selectedSection, setSelectedSection] = useState('');
 
   useEffect(() => {
-    setSelectedSection(location.pathname.replace('/', ''));
+    setSelectedSection(location.pathname.replace('/', '') || 'popular');
   }, [location.pathname]);
 
   return (
@@ -39,29 +39,39 @@ const More = () => {
           Highly rated
         </button>
       </nav>
+      <hr className='more-hr'/>
 
       {/* Render the items based on the selected section */}
       {selectedSection === 'popular' && (
         <div className='popularp'>
-          <Product productId={'1'}/>
-          <Product productId={'4'}/>
-          <Product productId={'6'}/>
-          <Product productId={'5'}/>
+          <Product productId={'1'} />
+          <Product productId={'8'} />
+          <Product productId={'7'} />
+          <Product productId={'5'} />
         </div>
       )}
       {selectedSection === 'offers' && (
-        <div>
-          hi
+        <div className='popularp'>
+          <Product productId={'5'} />
+          <Product productId={'6'} />
+          <Product productId={'8'} />
+          <Product productId={'3'} />
         </div>
       )}
       {selectedSection === 'new' && (
-        <div>
-          {/* Render the items for the "Newest" section */}
+        <div className='popularp'>
+          <Product productId={'1'} />
+          <Product productId={'2'} />
+          <Product productId={'5'} />
+          <Product productId={'6'} />
         </div>
       )}
       {selectedSection === 'high' && (
-        <div>
-          {/* Render the items for the "Highly rated" section */}
+        <div className='popularp'>
+          <Product productId={'6'} />
+          <Product productId={'8'} />
+          <Product productId={'4'} />
+          <Product productId={'9'} />
         </div>
       )}
     </>

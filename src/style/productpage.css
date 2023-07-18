@@ -1,0 +1,26 @@
+.product-grid{
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 5rem auto;
+}
+
+.products h1{
+    text-align: center;
+    margin:  0 auto;
+
+}
+
+@media screen and (max-width: 768px){
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    
+@media screen and (max-width: 480px){
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+}
+    

@@ -3,16 +3,23 @@
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: white;
-    margin: 3rem auto;
+    margin: 1.75rem auto;
     min-width: 80%;
     padding: 0;
+  }
+
+  .more-hr{
+    color: #c0bcbc;
+    max-width: 85%;
+    margin-bottom: 2rem;
+
   }
   
   .more-link {
     margin: 0 1rem;
     font-size: 1.25rem;
     font-weight: 600;
-    color: #414040;
+    color: #7b7979;
     text-decoration: none;
     padding: 0 2rem;
   }

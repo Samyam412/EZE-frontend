@@ -7,36 +7,24 @@ import Support from "./pages/supportpage.js";
 import Contact from "./pages/contactpage.js";
 import LoginPage from "./pages/loginpage";
 import ProfilePage from "./pages/profilepage";
+import Footer from "./components/footer";
+import ProductDisplayPage from "./pages/productdisplaypage";
 
 function App() {
   return (
     <Router>
-    <Navbar />
-    
-    <Routes>
-    <Route path="/login" element={<LoginPage />}>
-        {" "}
-      </Route>
-    <Route path="/" element={<Home />}>
-        {" "}
-      </Route>
-      
-    <Route path="/product" element={<Product/>}>
-        {" "}
-      </Route>
-    <Route path="/support" element={<Support/>}>
-        {" "}
-      </Route>
-    <Route path="/contact" element={<Contact/>}>
-        {" "}
-      </Route>
-    <Route path="/profile" element={<ProfilePage/>}>
-        {" "}
-      </Route>
-    </Routes>
-
-    
-  </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/:productId" element={<ProductDisplayPage />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
